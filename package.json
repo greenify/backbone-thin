@@ -1,6 +1,6 @@
 {
   "name": "backbone-thin",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Only Backbone.Model and collection",
   "main": "index.js",
   "scripts": {
