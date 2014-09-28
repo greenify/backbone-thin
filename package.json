@@ -1,0 +1,30 @@
+{
+  "name": "backbone-thin",
+  "version": "1.0.0",
+  "description": "Only Backbone.Model and collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/greenify/backbone-thin"
+  },
+  "keywords": [
+    "backbone",
+    "model",
+    "collection",
+    "thin",
+    "lightweight"
+  ],
+  "author": "greenify",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/greenify/backbone-thin/issues"
+  },
+  "homepage": "https://github.com/greenify/backbone-thin",
+  "dependencies": {
+    "backbone-events-standalone": "^0.2.4",
+    "js-extend": "^0.0.2"
+  }
+}
