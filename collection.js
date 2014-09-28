@@ -6,9 +6,13 @@
 //     http://backbonejs.org
 
 var Events = require("backbone-events-standalone");
-var extend = require("js-extend");
+var extend = require("backbone-extend-standalone");
 var _ = require("underscore");
 var Model = require("./model");
+
+// Create local references to array methods we'll want to use later.
+var array = [];
+var slice = array.slice;
 
 // Backbone.Collection
 // -------------------
@@ -37,7 +41,7 @@ var setOptions = {add: true, remove: true, merge: true};
 var addOptions = {add: true, remove: false};
 
 // Define the Collection's inheritable methods.
-extend(Collection.prototype, Events, {
+_.extend(Collection.prototype, Events, {
 
   // The default model for a collection is just a **Backbone.Model**.
   // This should be overridden in most cases.
@@ -427,3 +431,7 @@ _.each(attributeMethods, function(method) {
     return _[method](this.models, iterator, context);
   };
 });
+
+// setup inheritance
+Collection.extend = extend;
+module.exports = Collection;

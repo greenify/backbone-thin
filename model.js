@@ -6,7 +6,7 @@
 //     http://backbonejs.org
 
 var Events = require("backbone-events-standalone");
-var extend = require("js-extend");
+var extend = require("backbone-extend-standalone");
 var _ = require("underscore");
 
 // Backbone.Model
@@ -33,7 +33,7 @@ var Model = function(attributes, options) {
 };
 
 // Attach all inheritable methods to the Model prototype.
-extend(Model.prototype, Events, {
+_.extend(Model.prototype, Events, {
 
   // A hash of attributes whose current and previous value differ.
   changed: null,
@@ -360,3 +360,7 @@ _.each(modelMethods, function(method) {
     return _[method].apply(_, args);
   };
 });
+
+// setup inheritance
+Model.extend = extend;
+module.exports = Model;
